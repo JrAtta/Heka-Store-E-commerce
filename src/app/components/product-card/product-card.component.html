@@ -42,8 +42,8 @@
 
     </div>
     <div class="card-body" [routerLink]="['/detailes',product.title,product.id]">
-      <h6 class="card-category "><a href="#">{{product.category}}</a></h6>
-      <h4 class="card-title "><a href="#"> {{product.title.split(' ',8).join(' ')}} </a></h4>
+      <h6 class="card-category "><a >{{product.category}}</a></h6>
+      <h4 class="card-title "><a > {{product.title.split(' ',8).join(' ')}} </a></h4>
       <app-star-raiting [raiting]="product.rait" class="raiting"></app-star-raiting>
       <div class="card-price">
         <div class="new-price">{{product.price.newPrice.toFixed(2) | currency}}</div>
