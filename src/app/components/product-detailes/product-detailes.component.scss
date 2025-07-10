@@ -1,0 +1,18 @@
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
+@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+.showcase-title{
+  font-weight: 600;
+  font-size: var(--fs-4);
+}
+.showcase-category{
+ font-size: var(--fs-6);
+ text-transform: capitalize;
+ transition: color var(--transition-timing);
+ white-space: nowrap;
+ overflow: hidden;
+ text-overflow: ellipsis;
+
+}
+.new-price{
+  color: var(--bittersweet);
+}

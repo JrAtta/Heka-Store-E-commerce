@@ -1,0 +1,67 @@
+<footer class="">
+  <div class="container-md ">
+    <!-- footer top  -->
+    <div class="brand-category  ">
+      <h2 class="category-title">
+        brand directory
+      </h2>
+      @for(item of brands ; track $index ){
+      <div class="category-box d-flex align-items-center  w-100  column-gap-4 row-gap-2 flex-wrap">
+        <h5 class="category-box-title m-0   ">
+          {{item.title}}
+        </h5>
+        @for(link of item.links ;track $index){
+          <a href="#" class=""> {{link}} </a>
+        }
+      </div>
+    }
+    </div>
+   <!-- footer mid  -->
+    <div class=" parent-nav d-flex flex-md-row flex-column justify-content-between  column-gap-5 w-100 flex-wrap">
+      @for(navCat of navCategories ; track $index){
+      <div class="nav-category  d-flex flex-column  align-items-start   ">
+        <h1>{{navCat.title}}</h1>
+        @for(link of navCat.links ; track $index){
+        <a href="" >{{link}}</a>
+        }
+      </div>
+    }
+
+    <!-- last two  -->
+    <div class="contact-section nav-category  d-flex flex-column  align-items-start    " >
+      <h1>Contact</h1>
+      <a class="lh-lg locate"><i class="fas fa-location-dot pe-2 fs-5"></i>419 State 414 Rte Beaver Dams, New York(NY), 14812, USA</a>
+      <a href="" class="lh-lg mt-1 "><i class="fas fa-phone pe-2 fs-5"></i>(607) 936-8058</a>
+      <a href="" class="lh-lg mt-1 d-flex align-items-center gap-2  "><i class="fas fa-envelope  fs-5"></i> <span> {{mailEx}}</span> </a>
+    </div>
+    <!-- social-icons -->
+    <div class="nav-category  d-flex  d-lg-none flex-column  align-items-start   ">
+      <h1>Follow Us</h1>
+      <ul class="social-icons  d-flex gap-3 align-items-center ps-0   ">
+        <li class="">
+          <a href="https://facebook.com" title="facebook" class=" fs-4"><i
+              class="fa-brands fa-facebook "></i></a>
+        </li>
+        <li class="">
+          <a href="https://twitter.com" class=" fs-4"  title="twitter"><i
+              class="fa-brands fa-twitter "></i></a>
+        </li>
+        <li class="">
+          <a href="https://instagram.com" class=" fs-4"  title="instagram"><i
+              class="fa-brands fa-instagram "></i></a>
+        </li>
+        <li class="">
+          <a href="https://linkedin.com" class="fs-4"  title="linkedin"><i
+              class="fa-brands fa-linkedin "></i></a>
+        </li>
+
+      </ul>
+    </div>
+    </div>
+    <!-- footer bootom -->
+    <div class="payment-method d-flex flex-column justify-content-center align-items-center gap-3 mt-5 ">
+      <img src="../../../assets/images/payment.png" alt="">
+      <p>Copyright © Anon all rights reserved.</p>
+    </div>
+  </div>
+</footer>

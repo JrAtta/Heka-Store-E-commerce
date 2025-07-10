@@ -1,0 +1,230 @@
+.container-md {
+  padding-inline: 20px;
+  margin-bottom: 30px;
+
+  .title {
+    text-transform: capitalize;
+    font-size: var(--fs-4);
+    font-weight: var(--weight-600);
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid var(--cultured);
+    margin-bottom: 30px;
+
+  }
+
+  .card {
+
+    border-color: var(--cultured);
+
+    .name {
+      font-size: var(--fs-3);
+      color: var(--sonic-silver);
+    }
+
+    .job-title {
+      font-size: var(--fs-6);
+      font-weight: var(--weight-500);
+      color: var(--onyx);
+    }
+
+    .para {
+      width: 80%;
+      color: var(--onyx);
+      font-size: var(--fs-7);
+      line-height: 30px;
+      text-wrap: balance;
+
+    }
+
+    .container-service {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      cursor: pointer;
+
+
+      .service-name {
+        text-transform: capitalize;
+        font-size: var(--fs-5);
+        font-weight: var(--weight-600);
+        color: var(--sonic-silver);
+        margin-bottom: 3px;
+
+        &:hover {
+          color: var(--onyx);
+          transition: color .3s linear;
+        }
+      }
+
+      .service-detailes {
+        text-transform: capitalize;
+        font-size: var(--fs-8);
+        font-weight: var(--weight-400);
+        color: var(--davys-gray);
+
+        &:hover {
+          color: var(--onyx);
+          transition: color .3s ease;
+        }
+      }
+    }
+
+
+  }
+
+  .main-banner {
+    padding: 40px;
+    background-image: url("/assets/images/cta-banner.jpg");
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    border-radius: var(--border-radius-md);
+
+    .layer {
+      max-width: 280px;
+      background: var(--bg-opacity);
+      border-radius: var(--border-radius-md);
+
+      h3 {
+        color: var(--davys-gray);
+        font-size: var(--fs-1);
+        font-weight: var(--weight-700);
+
+      }
+    }
+
+    .shop-now{
+      color: var(--sonic-silver); 
+      font-size: var(--fs-3);
+      transition: color var(--transition-timing);
+      &:hover{
+        color : var(--salmon-pink)
+      }
+    }
+  }
+
+  @media (max-width:1200px) {
+    .card.card-services {
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      // padding-right: 20px;
+
+      .container-service {
+        flex-direction: column;
+        gap: 10px;
+
+        @media (max-width:1000px) {
+          flex-direction: row;
+          gap: 15px;
+
+          .service-name {
+            font-size: var(--fs-7);
+            font-weight: var(--weight-600);
+          }
+
+          .service-detailes {
+            font-size: var(--fs-8);
+            font-weight: var(--weight-400);
+          }
+
+        }
+
+        @media (max-width:600px) {
+          flex-direction: row;
+          gap: 10px;
+
+          .service-name {
+            font-size: var(--fs-8);
+            font-weight: var(--weight-600);
+          }
+
+          .service-detailes {
+            font-size: var(--fs-8);
+            font-weight: var(--weight-400);
+          }
+
+        }
+      }
+
+    }
+
+
+  }
+
+  .has-scrollbar {
+    width: 100%;
+    margin: 0 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    padding-left: 0;
+    overflow: auto hidden;
+    scroll-snap-type: x mandatory; // must used >> X or inline
+
+    .blog-item {
+      min-width: calc(25% - 20px);
+      // padding: 15px;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 20px;
+      border-radius: var(--border-radius-md);
+      scroll-snap-align: start; // must used when used scroll snap >>
+
+
+      @media (max-width:1200px) {
+        min-width: calc(33.1% - 10px);
+
+      }
+
+      @media (max-width:1024px) {
+        min-width: calc(50% - 10px);
+      }
+
+      @media (max-width:600px) {
+        min-width: calc(100% - 15px);
+      }
+
+      .blog-image {
+        // width: 300px;
+        overflow: hidden;
+
+      }
+
+      .blog-content {
+        align-self: start;
+
+        .blog-category {
+          color: var(--salmon-pink);
+        }
+
+        .blog-title {
+          color: var(--eerie-black);
+          font-weight: var(--weight-600);
+          font-size: var(--fs-4);
+          cursor: pointer;
+
+          &:hover {
+            color: var(--salmon-pink);
+            transition: color var(--transition-timing);
+          }
+        }
+
+        .blog-meta {
+          color: var(--davys-gray);
+          font-size: var(--fs-7);
+          font-weight: var(--weight-500);
+        }
+
+      }
+
+
+    }
+  }
+}

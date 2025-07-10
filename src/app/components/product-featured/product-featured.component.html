@@ -1,0 +1,85 @@
+<div class="product-feature ">
+  <div class="title"> deal of the day</div>
+  <div class="showcase-wrapper has-scrollbar">
+
+      <div class="showcase-container "  >
+        <div class="showcase ">
+          <div class="showcase-banner">
+            <img src="./assets/images/products/shampoo.jpg"  alt="" class="" >
+          </div>
+          <div class="showcase-content">
+              <app-star-raiting [raiting]="3" class="showcase-raiting" ></app-star-raiting>
+            <div class="showcase-title">shampoo, conditioner & facewash packs</div>
+            <div class="showcase-describtion">
+              <ul>
+                <li>Swagger Antiperspirant.</li>
+                <li>Hand & Body Lotion, Swagger with Argan Oil.</li>
+                <li>Swagger Body Wash, 24 oz, Swagger Dry Spray.</li>
+                <li>Strengthen your swagger with the smells of lime and cedarwood.</li>
+              </ul>
+            </div>
+            <div class="showcase-price">
+              <div class="new-price" >$150.00</div>
+              <div class="old-price" >$250.00</div>
+            </div>
+            <div class="showcase-button">
+              <button (click)="addToCart()" >add to cart</button>
+            </div>
+            <div class="showcase-status">
+              <div class="showcase-status-content">
+                <p class="sold-out mb-2">already sold: <span class="fw-bold">20</span></p>
+                  <p class="available mb-2">available: <span class="fw-bold">40</span></p>
+              </div>
+              <div class="showcase-status-bar main-bar">
+                <div class="sub-bar"></div>
+              </div>
+            </div>
+            <div class="showcase-offer">
+              <p class="offer-message">hurry up! offer ends in: </p>
+              <app-count-down  [targetDate]="targetDate"></app-count-down>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="showcase-container">
+
+      <div class="showcase ">
+        <div class="showcase-banner">
+          <img src="./assets/images/products/jewellery-1.jpg"  alt="" class="" >
+        </div>
+        <div class="showcase-content ">
+            <app-star-raiting [raiting]="5" class="showcase-raiting" ></app-star-raiting>
+          <div class="showcase-title">Rose Gold diamonds Earring</div>
+          <div class="showcase-describtion">
+            <ul>
+              <li>SIRAN by IRAM Made in Egypt.</li>
+              <li>Lifetime Warranty.</li>
+              <li>Your Order Comes with receipt, SIRAN Special Bag & a Jewelry Box.</li>
+            </ul>
+          </div>
+          <div class="showcase-price">
+            <div class="new-price" >$1990.00</div>
+            <div class="old-price" >$2000.00</div>
+          </div>
+          <div class="showcase-button">
+            <button (click)="addToCart()">add to cart</button>
+          </div>
+          <div class="showcase-status">
+            <div class="showcase-status-content">
+              <p class="sold-out mb-2">already sold: <span class="fw-bold">15</span></p>
+                <p class="available mb-2">available: <span class="fw-bold">40</span></p>
+            </div>
+            <div class="showcase-status-bar main-bar">
+              <div class="sub-bar"></div>
+            </div>
+          </div>
+          <div class="showcase-offer">
+            <p class="offer-message">hurry up! offer ends in: </p>
+            <app-count-down  [targetDate]="targetDate1"></app-count-down>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

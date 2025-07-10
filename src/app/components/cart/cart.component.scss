@@ -1,0 +1,205 @@
+.container-md
+{
+  .cart-title{
+    margin-bottom: 50px;
+    color: var(--davys-gray);
+    font-size: var(--fs-1);
+    font-weight: var(--weight-600);
+    position: relative;
+    @media (max-width:668px) {
+      font-size: var(--fs-2);
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      left: 0px; bottom: -10px;
+      width:0%;
+      height: 3px;
+      border-radius: var(--border-radius-md);
+      background:linear-gradient(to right ,var(--salmon-pink) 30% ,  var(--davys-gray) 70%);
+      z-index: 1;
+      animation: translate-width alternate 3.5s  forwards ease-in;
+      animation-delay: 2s;
+      @keyframes translate-width {
+       from{
+       width:0%;
+       }
+       to{
+         width:50%;
+       }
+       }
+     }
+  }
+
+   .product-container{
+    margin-top: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cultured);
+    &:last-of-type{
+      border: none;
+    }
+    @media (max-width:400px) {
+      flex-wrap: wrap;
+      justify-content: end;
+
+    }
+
+    .showcase-product{
+      gap: 20px;
+      @media (max-width:400px) {
+        width: 100%;
+      }
+      img{
+        width: 120px;
+        object-fit: cover;
+        object-position: center;
+        @media (max-width:668px) {
+          width: 100px;
+        }
+        @media (max-width:400px) {
+          width: 80px;
+        }
+      }
+      .showcase-detailes{
+        .title{
+          color: var(--davys-gray);
+          letter-spacing: .5px;
+          line-height: 23px;
+          font-size: var(--fs-4);
+          font-weight: var(--weight-600);
+          @media (max-width:668px) {
+            font-size: var(--fs-5);
+          }
+          @media (max-width:400px) {
+            width:200px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: var(--fs-6);
+
+          }
+        }
+        .price{
+          font-size: var(--fs-4);
+          font-weight: var(--weight-600);
+          color: var(--salmon-pink);
+          @media (max-width:668px) {
+            font-size: var(--fs-5);
+          }
+          @media (max-width:400px) {
+            font-size: var(--fs-6);
+          }
+        }
+        .card-price{
+  margin-top: 10px;
+  // margin-bottom: 20px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  gap:  15px;
+  @media (max-width:450px) {
+    flex-wrap: wrap;
+    gap:  10px;
+
+  }
+  .new-price{
+    font-size: var(--fs-4);
+    font-weight: var(--weight-700);
+    color: var(--salmon-pink);
+    word-break: break-all;
+     @media (max-width:450px) {
+      font-size: var(--fs-7);
+      font-weight: var(--weight-700);
+
+  }
+  }
+  .old-price{
+    word-break: break-all;
+
+
+    text-decoration: line-through;
+    font-size: var(--fs-5);
+    font-weight: var(--weight-300);
+    color: var(--sonic-silver);
+     @media (max-width:450px) {
+      font-size: var(--fs-9);
+      font-weight: var(--weight-300);
+
+
+  }
+  }
+}
+        button{
+          border:1px solid  ;
+          color: var(--sonic-silver);
+          transition: all var(--transition-timing);
+          padding: 5px 10px;
+          border-radius: var(--border-radius-sm);
+          text-transform: capitalize;
+          font-size: var(--fs-5);
+          font-weight: var(--weight-600);
+          letter-spacing: .5px;
+          gap:7px;
+
+          @media (max-width:668px) {
+            font-size: var(--fs-6);
+          }
+
+          &:active{
+             border-color: var(--bittersweet);
+
+             }
+           &:hover{
+             color: var(--bittersweet);
+           }
+        }
+      }
+
+    }
+    .showcase-amount{
+      border: 1px solid var(--sonic-silver);
+      border-radius: var(--border-radius-sm);
+      @media (max-width:668px) {
+      align-self: end;
+        scale: .9;
+      }
+      @media (max-width:400px) {
+        scale: .8;
+      }
+      button{
+        color: var(--sonic-silver);
+        border-radius: var(--border-radius-sm) 0 0 var(--border-radius-sm) ;
+        &:last-child{
+          border-radius: 0 var(--border-radius-sm) var(--border-radius-sm) 0;
+        }
+      }
+      p{
+        color: var(--davys-gray);
+      }
+    }
+
+
+  }
+  .total-price{
+    div{
+      color: var(--davys-gray);
+      font-size: var(--fs-4);
+      font-weight: var(--weight-600);
+    }
+    button{
+      background: var(--ocean-green);
+      color: var(--white);
+      font-weight: 600;
+      &:last-of-type{
+      background: var(--salmon-pink);
+
+      }
+    }
+    @media (max-width:668px) {
+      scale: .9;
+    }
+  }
+}
+
+

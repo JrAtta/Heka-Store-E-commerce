@@ -1,0 +1,31 @@
+
+<div class="container-md h-100 my-5">
+  <div class="row g-0 align-items-center">
+    <div class="product-banner col-md-5  ">
+      <owl-carousel-o [options]="customOptions">
+        <ng-template carouselSlide><img class="w-100 " [src]="product?.defaultImage  " [alt]="product?.title|| 'image Can not fetch'" title="img"/></ng-template>
+        <ng-template carouselSlide><img class="w-100 " [src]="product?.hoverImage  " [alt]="product?.title|| 'image Can not fetch'" title="img"/></ng-template>
+      </owl-carousel-o>
+
+    </div>
+
+    <div class="showcase-content col-md-7  p-4 lh-lg">
+      <p class="text-secondary" *ngIf="product?.description">description :{{product?.description}} </p>
+    <div class="d-flex align-items-center gap-2">
+      <app-star-raiting [raiting]="product?.rait!  " class="fs-4"></app-star-raiting>
+    <span class="text-secondary" *ngIf="product?.ratingAmount">({{product?.ratingAmount}})</span>
+    </div>
+      <h5 class="showcase-title mb-2 lh-lg"> <span class="h6"> product name  :</span> {{product?.title || 'title Can not fetch'}} </h5>
+      <p class="showcase-category mb-1 text-success">Category : {{product?.category ||' category Can not fetch'}}</p>
+      <div class="showcase-price d-flex gap-4 ">
+        <div class="new-price fw-bold">Price : {{product?.price?.newPrice?.toFixed(2)   |currency}}</div>
+        <div class="old-price text-decoration-line-through text-muted">{{product?.price?.oldPrice?.toFixed(2) |currency}}</div>
+      </div>
+      <button class="btn btn-success w-100 mt-3 text-capitalize" (click)="addToCart(product?.id!)">add to cart</button>
+  </div>
+  </div>
+  <div class="mt-5">
+    <app-product-main></app-product-main>
+  </div>
+</div>
+

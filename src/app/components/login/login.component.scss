@@ -1,0 +1,148 @@
+
+
+
+.containerr{
+  // min-height: 80vh;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  background-image: url(/assets/images/newsletter.png);
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+  @media (max-width:900px) {
+    background-size: cover;
+
+  }
+
+  .form{
+    // min-height: 55vh;
+    padding-bottom: 20px;
+    width: 480px;
+    // min-width: 400px;
+    margin-left: auto;
+    box-shadow:var(--shadow-lg);
+    padding-top: 30px;
+    padding-inline: 3.5rem;
+    border-radius: 0 0  ;
+    @media (max-width:900px) {
+    background:rgba(0, 0, 0, 0.3);
+
+    }
+    @media (max-width:400px) {
+    scale: .9;
+
+    }
+    @media (max-width:350px) {
+    scale: .78;
+
+    }
+
+    .header{
+      font-weight: 700;
+      color: var(--form-color);
+      +p{
+        font-weight: 500;
+        font-size: 14px;
+        color: var(--eerie-black);
+        @media (max-width:900px) {
+          color: #fff;
+            a{
+              text-decoration: underline;
+            }
+          }
+      }
+    }
+
+    form{
+      input{
+        padding: 10px;
+        border-radius: var(--border-radius-sm) ;
+        border: 1px solid  var(--sonic-silver);
+        outline: none;
+        background: transparent;
+        @media (max-width:900px) {
+        border-color: var(--form-color);
+        color: #fff;
+
+          }
+        &::placeholder{
+          color: var(--sonic-silver);
+          @media (max-width:900px) {
+          color: #ffffffbb;
+
+          }
+        }
+      }
+      button{
+        padding: 10px;
+        border-radius: var(--border-radius-sm);
+        border: none;
+        margin-top: 1rem;
+        width: 100%;
+        background: var(--form-color);
+        color: #FFF;
+        font-size: 1.3rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        transition: var(--transition-timing);
+        position: relative;
+        &:hover{
+          background:#000;
+        }
+      }
+    }
+    .social{
+      cursor: pointer;
+      transition: var(--transition-timing);
+      .fa-brands{
+        color: #000;
+        padding: 3px;
+        transition: var(--transition-timing);
+      @media (max-width:900px) {
+        &:hover{
+          translate: 0 -10px  ;
+          color: #fff;
+
+        }
+      }
+      }
+    }
+    .loader {
+      top: 15px;
+      left: 25px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      animation: rotate 1s linear infinite
+    }
+    .loader::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #FFF;
+      animation: prixClipFix 2s linear infinite ;
+    }
+
+    @keyframes rotate {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
+  }
+}
+

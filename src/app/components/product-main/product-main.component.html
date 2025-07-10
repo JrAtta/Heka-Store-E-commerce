@@ -1,0 +1,15 @@
+<div class="product-container">
+  <div class="flex-between align-items-start parent flex-wrap gap-1">
+
+     <div class="title">
+       new products
+     </div>
+<button  class=" btn text-start ps-0" (click)="navigateToAllProducts()">
+  view all products
+</button>
+  </div>
+
+  <app-product-card [productCardList]="productStaticList.slice(0,12)"></app-product-card>
+
+</div>
+

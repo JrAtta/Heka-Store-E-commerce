@@ -1,0 +1,60 @@
+<nav class="w-100 border-bottom position-relative ">
+  <div class="container-md w-100 d-flex justify-content-between align-items-center  h-100 p-0 " [ngStyle]="{'padding': '20px'}">
+    <ul class="social-icons list-unstyled d-lg-flex d-none m-0  justify-content-start align-items-center gap-2 w-25 ">
+      <li class="">
+        <a href="https://facebook.com" class="a " [ngStyle]="{'padding': '7px '}" title="facebook"><i class="fa-brands fa-facebook "></i></a>
+      </li>
+      <li class="">
+        <a href="https://twitter.com" class="a " [ngStyle]="{'padding': '7px '}" title="twitter" ><i class="fa-brands fa-twitter "></i></a>
+      </li>
+      <li class="">
+        <a href="https://instagram.com" class="a " [ngStyle]="{'padding': '7px '}" title="instagram"  ><i class="fa-brands fa-instagram "></i></a>
+      </li>
+      <li class="">
+        <a href="https://linkedin.com" class="a " [ngStyle]="{'padding': '7px '}" title="linkedin" ><i class="fa-brands fa-linkedin "></i></a>
+      </li>
+
+    </ul>
+    <div class="text-uppercase   " [ngStyle]="{'font-size' : 'var(--fs-8)'}" ><a href="" [ngStyle]="{'color' : 'var(--spanish-silver)'}" class="fw-semibold d-inline-block">Free Shipping</a> This Week Order Over - $55</div>
+    <div class="d-flex  d-lg-block d-none" >
+      <select  title="Currency" class="border border-white p-2 text-uppercase " [ngStyle]="selectStyle" >
+        <option value="USD $" class=" " selected>USD $</option>
+        <option value="EUR €" class=" ">EUR €</option>
+      </select>
+      <select  title="Language" class="border border-white p-2 text-uppercase  " [ngStyle]="selectStyle">
+        <option value="ENGLISH"   selected>ENGLISH</option>
+        <option value="Français"  >Français</option>
+        <option value="Español" >Español</option>
+      </select>
+
+      <!-- sign out  -->
+      <button class="btn signOut  ms-3  " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Sign out</button>
+
+
+      <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Are you sure ? </h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body  ">
+              Stay with us
+              <i class="far fa-face-frown text-dark fs-5"></i>
+
+            </div>
+            <div class="modal-footer ">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-danger  " (click)="signOut()" data-bs-dismiss="modal">Yes, Sign out </button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <span class="loader " *ngIf="isLoading"></span>
+  </div>
+</nav>
+
+

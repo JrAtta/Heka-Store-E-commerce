@@ -1,0 +1,58 @@
+  <div class=" row gy-4">
+    @for (product of productCardList | search:nameString; track $index ) {
+      <div class=" card-container col-xl-3 col-lg-4 col-6">
+        <!-- <div class="card "  > -->
+        <div class="card " >
+    <div class="card-banner" >
+      <img class=" default" [src]="product.defaultImage" alt="Title" />
+      <img class=" hover " [src]="product.hoverImage" alt="Title" />
+
+      <div class="card-action">
+        <button   type="submit" class="btn-action" title="wishList" (click)="addProductToWishlist(product.id)">
+          <i class="far fa-heart" ></i>
+        </button>
+        <button type="submit" class="btn-action" title="Eye" [routerLink]="['/detailes',product.title,product.id]">
+          <i class="far fa-eye"></i>
+        </button>
+        <button type="submit" class="btn-action" title="Repeat" (click)="repeatProduct(product.id)">
+          <i class="fa-solid fa-repeat"></i>
+        </button>
+        <button type="submit" class="btn-action" title="Bag Add" (click)="addToCart(product.id)">
+          <i class="fas fa-bag-shopping"></i>
+        </button>
+      </div>
+
+      <div class="hint">
+        @if ( product.badgeText?.includes('sale')) {
+          <div class="card-badge angle black">
+            {{product.badgeText}}
+          </div>
+        }
+        @else if (product.badgeText?.includes('new')) {
+          <div class="card-badge angle pink">
+            {{product.badgeText}}
+          </div>
+        }
+        @else{
+          <div class="card-badge">
+            {{product.badgeText}}
+          </div>
+        }
+      </div>
+
+    </div>
+    <div class="card-body" [routerLink]="['/detailes',product.title,product.id]">
+      <h6 class="card-category "><a href="#">{{product.category}}</a></h6>
+      <h4 class="card-title "><a href="#"> {{product.title.split(' ',8).join(' ')}} </a></h4>
+      <app-star-raiting [raiting]="product.rait" class="raiting"></app-star-raiting>
+      <div class="card-price">
+        <div class="new-price">{{product.price.newPrice.toFixed(2) | currency}}</div>
+        <div class="old-price">{{product.price.oldPrice.toFixed(2) | currency}}</div>
+      </div>
+    </div>
+  </div>
+  </div>
+    }
+
+
+  </div>

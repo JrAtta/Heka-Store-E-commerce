@@ -1,0 +1,23 @@
+
+  h1{
+    color: var(--davys-gray);
+  }
+.form-control{
+
+  &:focus{
+    border-color: var(--cultured);
+    box-shadow: none;
+  }
+}
+
+.submit{
+  background: var(--salmon-pink);
+  color: var(--white);
+  border: 1px solid var(--cultured);
+  transition: all var(--transition-timing);
+  &:active{
+    background: var(--ocean-green);
+    color: var(--white);
+
+  }
+}

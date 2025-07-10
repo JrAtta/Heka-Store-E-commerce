@@ -1,0 +1,98 @@
+
+.container-md{
+
+
+.has-scrollbar{
+  width: calc(100% - 30px);
+  margin: 0 10px ;
+  height: 105px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+  padding:  20px;
+  padding-left: 0;
+  overflow: auto hidden;
+  scroll-snap-type: x mandatory; // must used >> X or inline
+
+  .category-item{
+    min-width: calc( 25% - 10px);
+    padding: 15px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid var(--cultured);
+    border-radius: var(--border-radius-md);
+    scroll-snap-align: start;  // must used when used scroll snap >>
+    @media (max-width:1200px) {
+      min-width:calc(33.1% );
+
+    }
+    @media (max-width:1024px) {
+      min-width: calc( 50%);
+    }
+    @media (max-width:600px) {
+      min-width:calc(100% + 30px);
+    }
+
+    .image-category{
+      width: 55px;
+      padding: 10px;
+      border: 1px solid hsl(0, 80%, 20% , .1) ;
+      border-radius: var(--border-radius-sm);
+      background: var(--cultured);
+      img{
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+      }
+
+    }
+
+    .content-category{
+      width: 100%;
+
+
+      .content-flex{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .name-category{
+          text-transform: uppercase;
+          font-size: var(--fs-6);
+          font-weight: var(--weight-600);
+          color: var(--eerie-black);
+
+          @media (max-width:1024px) {
+              font-size: var(--fs-7);
+          }
+        }
+        .amount-category{
+          color: var(--sonic-silver);
+          font-size:var(--fs-9);
+          font-weight: 500;
+        }
+      }
+      .show-category{
+        a{
+          text-transform: capitalize;
+          font-size: var(--fs-7);
+          font-weight: var(--weight-600);
+          color: var(--salmon-pink);
+          @media (max-width:1024px) {
+            font-size: var(--fs-8);
+        }
+        }
+      }
+    }
+
+
+  }
+
+}
+}

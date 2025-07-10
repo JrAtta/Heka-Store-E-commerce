@@ -1,0 +1,7 @@
+<app-nav *ngIf="checkPath"></app-nav>
+<app-header *ngIf="checkPath"></app-header>
+<app-menu-bar *ngIf="checkPath"></app-menu-bar>
+<div class=" p-0">
+ <router-outlet></router-outlet>
+ </div>
+<app-footer *ngIf="checkPath"></app-footer>

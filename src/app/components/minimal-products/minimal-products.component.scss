@@ -1,0 +1,92 @@
+.product-minimal{
+  // background: #000;
+  width: 100%;
+  height:fit-content;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  .product-showcase{
+    width: calc(33.3% - 30px);
+    min-width:calc(33.3% - 30px);
+    height: 100%;
+    // padding: 0 10px;
+    @media (max-width:992px) {
+      min-width:calc(50% - 30px);
+
+      }
+    @media (max-width:768px) {
+      min-width: 100%;
+      padding: 20px;
+    }
+
+
+
+    .title{
+      text-transform: capitalize;
+      font-size: var(--fs-4);
+      font-weight: var(--weight-600);
+      padding-bottom: 10px;
+      width: 100%;
+      border-bottom: 1px solid var(--cultured);
+      margin-bottom: 30px;
+
+    }
+    .showcase-wrapper{
+
+      display: flex;
+      justify-content:start;
+      align-items: center;
+      gap: 10px;
+      overflow: auto hidden;
+      scroll-snap-type: x mandatory;
+      transition: var(--transition-timing);
+
+      .showcase-container{
+        width: 100%;
+        padding-bottom: 0;
+        scroll-snap-align: end;
+        text-overflow: ellipsis;
+        @media (max-width:768px) {
+          min-width:calc(50% - 30px);
+          }
+          @media (max-width:580px) {
+          min-width:100%;
+          }
+        .showcase{
+          padding: 15px;
+          width: 100%;
+          border: 1px solid var(--cultured);
+          border-radius: var(--border-radius-md);
+          align-items: flex-start;
+          .showcase-title{
+            font-weight: 600;
+            @media (max-width:1100px) {
+              font-size: var(--fs-7);
+            }
+          }
+          .showcase-category{
+           font-size: var(--fs-7);
+           color: var(--davys-gray);
+           text-transform: capitalize;
+           transition: color var(--transition-timing);
+           white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis;
+           &:hover{
+            color: var(--salmon-pink);
+
+           }
+          }
+          .new-price{
+            color: var(--salmon-pink);
+
+          }
+        }
+      }
+    }
+  }
+}

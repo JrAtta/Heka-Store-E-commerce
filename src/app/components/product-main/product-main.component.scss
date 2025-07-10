@@ -1,0 +1,37 @@
+.product-container{
+  padding-inline: 20px;
+  margin-block: 30px;
+  height: 100%;
+  width: 100%;
+  .parent{
+    border-bottom: 1px solid var(--cultured);
+    margin-bottom: 30px;
+    text-transform: capitalize;
+    width: 100%;
+    padding-bottom: 10px;
+
+  }
+  .title{
+    font-size: var(--fs-4);
+    font-weight: var(--weight-600);
+  }
+
+.btn{
+  color: var(--salmon-pink);
+    font-weight: var(--weight-500);
+    font-size: var(--fs-6);
+
+  font-style: 15px;
+  &:active{
+    border-color:transparent;
+  }
+}
+
+
+}
+
+
+
+
+
+

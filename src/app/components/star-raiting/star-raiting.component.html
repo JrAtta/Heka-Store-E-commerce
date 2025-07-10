@@ -1,0 +1,19 @@
+
+<div class="raiting-color d-flex flex-wrap">
+  @for (star of [].constructor(stars.full); track star) {
+    <span class="">
+      <i class="fas fa-star"></i>
+    </span>
+  }
+  @if (stars.half) {
+    <span class="">
+      <i class="fas fa-star-half-stroke"></i>
+    </span>
+  }
+  @for (star of [].constructor(stars.empty); track star) {
+    <span class=" ">
+      <i class="far fa-star "></i>
+    </span>
+  }
+
+</div>

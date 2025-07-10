@@ -1,0 +1,126 @@
+
+
+
+.offcanvas{
+
+  padding: .2rem 0;
+  padding-right: 1.5rem;
+  padding-left: .6rem;
+  width: 100%;
+  max-width: 320px;
+  transition:all .5s ease;
+   @media (max-width: 768px) {
+    height: calc(100% - 60px);
+  }
+  .offcanvas-header{
+    // padding-right: 0;
+    // padding-left: 0;
+    margin-top: 10px ;
+
+
+    .offcanvas-title{
+
+      text-transform: uppercase;
+      color: var(--davys-gray);
+      font-size: var(--fs-5);
+      font-weight: 600;
+
+    }
+    button{
+      padding: 3px;
+      padding-right: 0;
+      padding-bottom: 0;
+      i{
+
+        font-size: var(--fs-3);
+
+      }
+
+    }
+  }
+
+
+
+  .offcanvas-body {
+
+     padding: 0;
+     .accordion{
+
+
+      .accordion-item{
+        margin: 0 10px;
+        border: none;
+
+
+      .accordion-button{
+        text-transform: capitalize;
+        padding-left: 0;
+
+        cursor: pointer;
+        button{
+          color: var(--sonic-silver);
+          font-size: var(--fs-7);
+        }
+
+        .nav-link{
+          color:var(--sonic-silver);
+          font-size: var(--fs-6);
+          font-weight:600;
+        }
+        &::after{
+          background-image: none;
+        }
+        &:not(.collapsed) {
+          color:var(--eerie-black);
+          background-color: transparent;
+          box-shadow: none;
+
+        }
+      }
+
+
+      .accordion-collapse{
+        transition: var(--transition-timing);
+        transition: .6s ease;
+
+        .accordion-body{
+          padding: 0;
+          li{
+            padding:  2px 0;
+             cursor: pointer;
+             transition: var(--transition-timing);
+             .count{
+              color:var(--sonic-silver);
+              font-size: var(--fs-7);
+              margin: 0;
+            }
+          a{
+
+            text-transform: capitalize;
+            color:var(--sonic-silver);
+            font-size: var(--fs-6);
+            font-weight: 300;
+          }
+          &:hover > a {
+            color: var(--davys-gray);
+          }
+          &:hover > .count {
+            color: var(--davys-gray);
+          }
+        }
+
+        }
+      }
+     }
+    }
+
+    .best-seller{
+
+      h6{
+        font-size: var(--fs-5);
+        margin-bottom: 10px;
+        color: var(--onyx);
+      }
+    }
+  }
+  }

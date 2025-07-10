@@ -1,0 +1,21 @@
+<div class="container-md ">
+<div class=" has-scrollbar">
+
+  @for (category of categoryList; track $index) {
+    <div class="category-item">
+    <div class="image-category">
+      <img [src]="category.image" [alt]="category.name" width="30px">
+    </div>
+    <div class="content-category">
+      <div class="content-flex">
+        <h5 class="name-category">{{category.name}} </h5>
+        <p class="amount-category m-0 p-0">({{category.quantity}})</p>
+      </div>
+      <div class="show-category">
+       <a href=""> show all</a>
+      </div>
+    </div>
+  </div>
+ }
+</div>
+</div>

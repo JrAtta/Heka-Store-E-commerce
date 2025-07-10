@@ -1,0 +1,202 @@
+.offcanvas{
+
+  padding: .2rem 0;
+  padding-right: 1rem;
+  padding-left: .2rem;
+  width: 100%;
+  max-width: 320px;
+  transition: .5s ease;
+ @media (max-width: 768px) {
+    height: calc(100% - 60px);
+  }
+  .offcanvas-header{
+    padding-right: 0;
+    padding-left: 0;
+    margin:10px 15px;
+    border-bottom: 2px solid var(--cultured);
+
+    .offcanvas-title{
+      padding-right: 0;
+      padding-left: 0;
+      text-transform: capitalize;
+      color: var(--salmon-pink);
+      font-size: var(--fs-3);
+      font-weight: 600;
+
+    }
+    button{
+      padding: 3px;
+      i{
+        font-size: var(--fs-4);
+
+      }
+
+    }
+  }
+
+
+
+  .offcanvas-body {
+    padding-right: 0;
+    padding-left: 0;
+    padding: 0;
+
+     .accordion{
+
+
+      .accordion-item{
+
+        margin: 0 15px;
+        border: none;
+
+
+      .accordion-button{
+        text-transform: capitalize;
+        padding-right: 0;
+        padding-left: 0;
+        border-bottom:  1px solid var(--cultured);
+        font-size: smaller;
+        cursor: pointer;
+
+        .nav-link{
+          color:var(--onyx);
+          font-size: var(--fs-5);
+          font-weight:600;
+        }
+        &::after{
+          background-image: none;
+        }
+        &:not(.collapsed) {
+          color:var(--eerie-black);
+          background-color: transparent;
+          box-shadow: none;
+
+        }
+      }
+
+
+      .accordion-collapse{
+        transition: var(--transition-timing);
+        transition: .6s ease;
+        border-bottom:  1px solid var(--cultured);
+        .accordion-body{
+          padding: 0;
+
+          a{
+            text-transform: capitalize;
+
+            color:var(--sonic-silver);
+            font-size: var(--fs-5);
+            font-weight: 300;
+            &:hover{
+              color: var(--davys-gray);
+            }
+          }
+          .last-Two{
+           box-shadow: 0px 1px 1px 1px  rgb(0, 0, 0,.1);
+           border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+           li{
+            border-bottom: 1px solid var(--cultured) ;
+            margin-left: 8px;
+
+            &:last-child{
+              border: none;
+            }
+           }
+          }
+        }
+      }
+
+
+     }
+    }
+
+    .signOut{
+      width: 270px;
+      background: var(--cultured);
+      color: var(--sonic-silver);
+      border: none;
+      font-size: var(--fs-5);
+      font-weight: 500;
+      transition: var(--transition-timing);
+      &:hover{
+        background: var(--salmon-pink);
+        color: var(--white);
+      }
+    }
+
+      .btn-close:focus{
+        box-shadow: none;
+
+      }
+      .modal-header,.modal-body{
+        color: var(--sonic_silver);
+      }
+    .modal-footer{
+      .btn{
+        font-size: var(--fs-6);
+        font-weight: 500;
+      }
+    }
+     .madal-backdrop.fade.show{
+      background: #000;
+     }
+
+
+    .social-icons li {
+      background:var(--cultured);
+      border-radius: var(--border-radius-sm);
+      transition: var(--transition-timing);
+      a{
+        color: var( --eerie-black);
+        transition: var(--transition-timing);
+
+        &:hover{
+          color: var(--cultured);
+
+        }
+      }
+      &:hover{
+       transform: translateY(-5px);
+       background-color: var(--salmon-pink);
+      }
+
+
+    }
+
+    .loader {
+      top: 46%;
+      left:50%;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      position: absolute;
+      animation: rotate 1s linear infinite;
+      z-index: 1111;
+
+    }
+    .loader::before {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      inset: 0px;
+      border-radius: 50%;
+      border: 5px solid #000;
+      animation: prixClipFix 2s linear infinite ;
+    }
+
+    @keyframes rotate {
+      100%   {transform: rotate(360deg)}
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
+  }
+  }
+
+

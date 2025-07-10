@@ -1,0 +1,39 @@
+.offer-time{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 25px;
+  .div{
+    background: var(--cultured);
+    border-radius: var(--border-radius-md);
+    padding-block: 10px;
+    width: 65px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width:768px) {
+      width: 50px;
+        }
+    .time{
+      font-size: var(--fs-4);
+      font-weight: var(--weight-600);
+      color: var(--eerie-black);
+      @media (max-width:992px) {
+      font-size: var(--fs-5);
+        }
+      @media (max-width:768px) {
+      font-size: var(--fs-6);
+        }
+    }
+    .text{
+      text-transform: capitalize;
+      font-size: var(--fs-8);
+      font-weight: var(--weight-300);
+      color: var(--davys-gray);
+        @media (max-width:768px) {
+        font-size: var(--fs-9);
+          }
+      }
+    }
+  }

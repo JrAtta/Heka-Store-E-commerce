@@ -1,0 +1,193 @@
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+aria-labelledby="offcanvasWithBothOptionsLabel" >
+<div class="offcanvas-header justify-content-between   ">
+  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">menu</h5>
+  <button type="button" class="" data-bs-dismiss="offcanvas" aria-label="Close">
+    <i class="fas fa-xmark"></i>
+  </button>
+</div>
+<div class="offcanvas-body has-scrollbar">
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <div class="accordion-header  ">
+        <div class="accordion-button  p-0 mt-2 py-2 position-relative">
+          <a class="nav-link  " href="#" title="home">
+            Home
+          </a>
+        </div>
+      </div>
+
+    </div>
+    @for(  item of menuDetailes ; track $index ;  ){
+    <div class="accordion-item">
+      <div class="accordion-header  ">
+        <div class="accordion-button   p-0 mt-2 py-2 position-relative" (click)="tooglePlus()"
+          data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + $index " aria-controls="collapse" #ref>
+          <a class="nav-link  " href="#" title="Men's">
+            {{ item.title}}
+          </a>
+          <button class="down-list-btn position-absolute end-0 " title="down-list-btn">
+            <i class="fas fa-plus "></i>
+          </button>
+        </div>
+      </div>
+      <div [id]=" 'collapse' + $index" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul class="p-2 m-0 ">
+            @for(subTitle of item.subTitles ;  track $index ){
+            <li>
+              <a href="#" class="pb-0 pt-2">
+                {{subTitle}}
+              </a>
+            </li>
+             }
+          </ul>
+        </div>
+      </div>
+    </div>
+  }
+
+    <div class="accordion-item">
+      <div class="accordion-header  ">
+        <div class="accordion-button  p-0 mt-2 py-2 position-relative">
+          <a class="nav-link  " href="#" title="Blog">
+            Blog
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header  ">
+        <div class="accordion-button  p-0 mt-2 py-2 position-relative">
+          <a class="nav-link  " href="#" title="Hot Offers">
+            Hot Offers
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- selcted sections -->
+    <div class="accordion-item mt-5 ">
+      <div class="accordion-header  ">
+        <div class="accordion-button   p-0 mt-2 py-2 position-relative" (click)="toogleCaretLeft()"
+          data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-controls="collapseFive" #ref2>
+          <a class="nav-link  " href="#" title="Language">
+            Language
+          </a>
+          <button class="down-list-btn position-absolute end-0 " title="down-list-btn">
+            <i class="fas fa-caret-left "></i>
+          </button>
+        </div>
+      </div>
+      <div id="collapseFive" class="accordion-collapse border-none collapse " data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <ul class="p-2 m-0 last-Two">
+            <li>
+              <a href="#" class="py-2">
+                English
+
+
+              </a>
+            </li>
+            <li>
+              <a href="#" class="py-2">
+                Español
+
+
+              </a>
+            </li>
+            <li>
+              <a href="#" class="py-2">
+                Frençh
+
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item mt-3 ">
+      <div class="accordion-header  ">
+        <div class="accordion-button   p-0 mt-2 py-2 position-relative" (click)="toogleCaretLeft()"
+          data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-controls="collapseSix" #ref2>
+          <a class="nav-link  " href="#" title="Currency">
+            Currency
+          </a>
+          <button class="down-list-btn position-absolute end-0 " title="down-list-btn">
+            <i class="fas fa-caret-left "></i>
+          </button>
+        </div>
+      </div>
+      <div id="collapseSix" class="accordion-collapse border-none collapse " data-bs-parent="#accordionExample">
+        <div class="accordion-body ">
+          <ul class="p-2 m-0 last-Two">
+            <li>
+              <a href="#" class="py-2">
+                USD $
+
+
+              </a>
+            </li>
+            <li>
+              <a href="#" class="py-2">
+                EUR €
+
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- sign out  -->
+    <button class="btn signOut  ms-3  mt-3" type="button" data-bs-toggle="modal" data-bs-target="#signOut"> Sign out</button>
+
+
+
+
+    <div class="modal fade" id="signOut" tabindex="-1" aria-labelledby="signOutLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="signOutLabel">Are you sure ? </h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body  position-relative  ">
+            Stay with us
+            <i class="far fa-face-frown text-dark fs-5"></i>
+            <span class="loader " *ngIf="isLoading"></span>
+
+          </div>
+          <div class="modal-footer ">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-danger  " (click)="signOut()" >Yes, Sign out </button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- social sections -->
+  <ul class="social-icons  d-flex  mt-3 justify-content-center align-items-center gap-3 w-100 ">
+    <li class="">
+      <a href="https://facebook.com" class="a " [ngStyle]="{'padding': '7px 10px '}" title="facebook"><i
+          class="fa-brands fa-facebook "></i></a>
+    </li>
+    <li class="">
+      <a href="https://twitter.com" class="a " [ngStyle]="{'padding': '7px 10px '}" title="twitter"><i
+          class="fa-brands fa-twitter "></i></a>
+    </li>
+    <li class="">
+      <a href="https://instagram.com" class="a " [ngStyle]="{'padding': '7px 10px '}" title="instagram"><i
+          class="fa-brands fa-instagram "></i></a>
+    </li>
+    <li class="">
+      <a href="https://linkedin.com" class="a " [ngStyle]="{'padding': '7px 10px '}" title="linkedin"><i
+          class="fa-brands fa-linkedin "></i></a>
+    </li>
+
+  </ul>
+</div>
+</div>

@@ -1,0 +1,82 @@
+<div class="container-md">
+
+  <div class="row gy-3">
+
+    <div class="col-xl-3 col-lg-6 col-md-12">
+
+      <div class="title mb-4">
+        testimonial
+      </div>
+
+      <div class="card  p-4  bg-transparent align-items-center text-center">
+        <div class="image rounded-circle overflow-hidden">
+          <img src="./assets/images/testimonial-1.jpg" class=" " alt="img" width="80">
+        </div>
+        <p class="name text-uppercase my-2 fw-bold  ">Alan Doe</p>
+        <p class="job-title"> CEO & Founder Invision </p>
+        <img src="./assets/images/icons/quotes.svg" alt="quates" class="mb-3" width="25">
+        <p class="para"> Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet.</p>
+      </div>
+
+    </div>
+
+    <div class="col-lg-6  col-md-12 main-banner  overflow-hidden flex-center flex-column ">
+      <div class="layer flex-center flex-column  text-center p-4 ">
+        <p class="rounded text-white p-2  flex-center text-center fw-semibold" style="background: var(--eerie-black); font-size: var(--fs-6);"> 25%  DISCOUNT</p>
+        <h3>Summer Collection</h3>
+        <p style="color: var(--sonic-silver); font-size: var(--fs-4);">Starting At 10$</p>
+        <a class="fw-bold shop-now " [routerLink]="['/allproducts']"  >SHOP NOW </a>
+      </div>
+    </div>
+
+
+    <div class="col-xl-3 col-lg-12  ">
+      <div class="title mb-4">
+        our services
+      </div>
+
+      <div class="card card-services p-4 pe-xl-0  bg-transparent  ">
+        @for (service of services; track $index) {
+        <div class="container-service ">
+          <span [innerHTML]="service.svg" class="icon" ></span>
+
+          <div class="SERVICE">
+            <p class="service-name ">
+              {{service.service}}
+            </p>
+            <p class="service-detailes mb-0">
+              {{service.detailes}}
+            </p>
+          </div>
+
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
+
+
+
+  <div class="scrollbar-container has-scrollbar  mt-5 ">
+@for (blog of blogData; track $index) {
+    <div class="blog-item flex-column overflow-hidden ">
+     <div class="blog-image overflow-hidden " >
+       <img [src]="blog.image" class="w-100 object-fit-cover rounded" alt="" >
+     </div>
+     <div class="blog-content  ">
+      <a  class="blog-category text-capitalize" > {{blog.category}}</a>
+      <p class="blog-title  text-capitalize">{{blog.title}}</p>
+      <div class="blog-meta text-capitalize">
+       {{blog.meta}}
+      </div>
+     </div>
+    </div>
+  }
+  </div>
+
+</div>
+
+
+
+

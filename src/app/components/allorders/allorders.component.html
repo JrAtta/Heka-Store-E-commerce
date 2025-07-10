@@ -1,0 +1,49 @@
+
+<div class="container-md ">
+  <div class="row">
+
+    <div class="col-md-6 col-sm-12  order-lg-1 order-2 mt-sm-5 " >
+      <h1 class="h4 text-uppercase my-3 fw-semibold title"> checkout carts :  </h1>
+  <form [formGroup]="allOrders" (ngSubmit)="orderSubmit()" >
+
+  
+
+    <div class="col mt-4">
+      <input type="tel"  formControlName="phone" required  placeholder="Phone" class="form-control">
+    </div>
+    @if(allOrders.get('phone')?.touched && allOrders.get('phone')?.invalid){
+      @if(allOrders.get('phone')?.getError('required')){
+        <small class="text-danger "> phone is required</small>
+      }
+      @if(allOrders.get('phone')?.getError('pattern')){
+        <small class="text-danger "> phone is invalid</small>
+      }
+    }
+
+    <div class="col mt-4">
+      <input type="text"  formControlName="city" required  placeholder="City" class="form-control">
+    </div>
+    @if(allOrders.get('city')?.touched && allOrders.get('city')?.invalid){
+      <small class="text-danger "> city is required</small>
+    }
+
+      <div class="col mt-4">
+      <textarea  formControlName="detailes" required  placeholder="Detailes" class="form-control" ></textarea>
+    </div>
+      @if(allOrders.get('detailes')?.touched && allOrders.get('detailes')?.invalid){
+        <small class="text-danger "> detailes is required</small>
+      }
+
+    <div class="">
+    <button type="submit" class="btn submit p-2 px-5 my-3 text-uppercase fw-semibold" (click)="orderSubmit()">checkout</button>
+
+    </div>
+  </form>
+    </div>
+
+    <div class="col-md-6 col-sm-12 overflow-hidden flex-center order-lg-2 order-1 ">
+      <img src="./assets/images/checkout.jpg" alt="" class="w-100 object-fit-cover">
+    </div>
+
+  </div>
+</div>

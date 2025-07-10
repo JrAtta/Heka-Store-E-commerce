@@ -1,0 +1,70 @@
+<div class="container-md my-5">
+  <h1 class="text-capitalize cart-title "> shopping cart :</h1>
+
+
+  @defer (on timer( 2000 ) ) {
+  @if (cartData.totalCartPrice !== 0 ) {
+  @for (item of cartData.products; track item._id) {
+
+  <div class="product-container flex-between ">
+    <div class="showcase-product flex-center  ">
+      <div class="showcase-img">
+        <img loading="lazy" [src]="item.product.imageCover" [alt]="item.product.title" title="img">
+      </div>
+      <div class="showcase-detailes">
+        <h1 class=" title ">{{item.product.title}}</h1>
+      <div class="card-price">
+          <p class="new-price mb-1 "> {{item.price | currency}}</p>
+        <p class="old-price mb-1 "> {{item.price * 1.5 | currency}}</p>
+      </div>
+        <button type="button" class="flex-center" (click)="removeSpecificProduct(item.product._id)">
+          <!-- delet($index) -->
+          <i class="fas fa-trash"></i>
+          remove
+        </button>
+      </div>
+    </div>
+    <div class="showcase-amount flex-center gap-2">
+      <button class="minus  btn" [disabled]="disabled" title="minus"
+        (click)="updatcount(item.product._id , item.count - 1)">
+        <i class="fas fa-minus"></i>
+      </button>
+      <p class="amount m-0 h5">
+        {{item.count }}
+      </p>
+      <button class="plus btn" title="plus" (click)="updatcount(item.product._id , item.count + 1)">
+        <i class="fas fa-plus"></i>
+      </button>
+    </div>
+  </div>
+  }
+
+  }@else{
+  <div class="flex-center ">
+    <img loading="lazy" src="./assets/images/cart empty.png" width="250" alt="" class="object-fit-cover" >
+  </div>
+  }
+  <div class="total-price mt-4 d-flex  align-items-start gap-2
+  flex-column">
+    <div>
+      total price: {{cartData.totalCartPrice |currency}}
+    </div>
+    @if (cartData.totalCartPrice !== 0 ) {
+    <div class="flex-between w-100 flex-wrap">
+      <button class="btn   text-capitalize h5 " [routerLink]="['/allorders',cartData._id]">
+        check out
+      </button>
+      <button class="btn  text-capitalize h4 flex-center gap-2" (click)="clearCart()">
+        <i class="fa-solid fa-trash-can"></i>
+        clear cart
+      </button>
+    </div>
+    }
+  </div>
+  }
+  @placeholder {
+  <div class="flex-center ">
+    <img loading="lazy" src="./assets/images/cart empty.png" width="250" alt="" class="object-fit-cover">
+  </div>
+  }
+</div>

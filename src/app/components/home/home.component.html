@@ -1,0 +1,49 @@
+
+
+<app-nav-home></app-nav-home>
+
+<div class="container-md ">
+  <div class="slider-hero has-scrollbar ">
+    <div class="slider-item">
+    <img src="./assets/images/banner-1.jpg" alt="" class="banner-img">
+    <div class="banner-content ">
+      <p class="banner-sub-title ">Trending item</p>
+      <h2 class="banner-title">Women's latest fashion sale</h2>
+      <p class="banner-text "> starting at $ <span class="price p-0 m-0 ">20</span>.00</p>
+      <a [routerLink]="['/allproducts']"  class="banner-btn"> Shop now</a>
+    </div>
+    </div>
+    <div class="slider-item">
+
+      <img src="./assets/images/banner-2.jpg" alt="" class="banner-img">
+      <div class="banner-content ">
+        <p class="banner-sub-title ">Trending accessories</p>
+        <h2 class="banner-title">Modern sunglasses</h2>
+        <p class="banner-text "> starting at $ <span class="price p-0 m-0 ">15</span>.00</p>
+        <a [routerLink]="['/allproducts']"  class="banner-btn"> Shop now</a>
+      </div>
+    </div>
+    <div class="slider-item">
+      <img src="./assets/images/Edit-banner-3.jpg" alt="" class="banner-img">
+      <div class="banner-content ">
+        <p class="banner-sub-title ">Sale Offer</p>
+        <h2 class="banner-title">New fashion summer sale</h2>
+        <p class="banner-text "> starting at $ <span class="price p-0 m-0 ">29</span>.99</p>
+        <a [routerLink]="['/allproducts']"  class="banner-btn"> Shop now</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="category-container">
+<app-category-item-container></app-category-item-container>
+</div>
+<div class="products ">
+  <app-products></app-products>
+</div>
+
+<div class="testimonial">
+  <app-testimonial></app-testimonial>
+</div>
+
+

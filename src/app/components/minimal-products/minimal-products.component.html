@@ -1,0 +1,121 @@
+<div class="product-minimal">
+  <div class="product-showcase">
+    <div class="title">new arrivals</div>
+    <div class="showcase-wrapper has-scrollbar">
+      <div class="showcase-container">
+        @for (item of newArrivalItems.slice(0,4); track $index) {
+        <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+          <div class="showcase-image"  >
+            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+          </div>
+          <div class="showcase-content">
+              <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
+              <p class="showcase-category mb-1">{{item.category}}</p>
+              <div class="showcase-price d-flex gap-4 ">
+                <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+                <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+              </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="showcase-container">
+        @for (item of newArrivalItems.slice(4,8); track $index) {
+        <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+          <div class="showcase-image"  >
+            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+          </div>
+          <div class="showcase-content">
+              <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
+              <p class="showcase-category mb-1">{{item.category}}</p>
+              <div class="showcase-price d-flex gap-4 ">
+                <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+                <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+              </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="product-showcase">
+    <div class="title">trending</div>
+    <div class="showcase-wrapper has-scrollbar">
+      <div class="showcase-container">
+        @for (item of trendingItems.slice(0,4); track $index) {
+        <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+          <div class="showcase-image"  >
+            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+          </div>
+          <div class="showcase-content">
+              <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
+              <p class="showcase-category mb-1">{{item.category}}</p>
+              <div class="showcase-price d-flex gap-4 ">
+                <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+                <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+              </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="showcase-container">
+        @for (item of trendingItems.slice(4,8); track $index) {
+        <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+          <div class="showcase-image"  >
+            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+          </div>
+          <div class="showcase-content">
+              <h5 class="showcase-title mb-2 "> {{item.title}} </h5>
+              <p class="showcase-category mb-1">{{item.category}}</p>
+              <div class="showcase-price d-flex gap-4 ">
+                <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+                <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+              </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+  <div class="product-showcase">
+    <div class="title">top rarted</div>
+    <div class="showcase-wrapper has-scrollbar">
+      <div class="showcase-container">
+        @for (item of topRatedItems.slice(0,4); track $index) {
+        <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+          <div class="showcase-image"  >
+            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+          </div>
+          <div class="showcase-content">
+              <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
+              <p class="showcase-category mb-1">{{item.category}}</p>
+              <div class="showcase-price d-flex gap-4 ">
+                <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+                <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+              </div>
+          </div>
+        </div>
+        }
+      </div>
+      <div class="showcase-container">
+        @for (item of topRatedItems.slice(4,8); track $index) {
+        <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+          <div class="showcase-image"  >
+            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+          </div>
+          <div class="showcase-content">
+              <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
+              <p class="showcase-category mb-1">{{item.category}}</p>
+              <div class="showcase-price d-flex gap-4 ">
+                <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+                <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+              </div>
+          </div>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+
+
+ </div>

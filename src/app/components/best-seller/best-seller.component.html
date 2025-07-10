@@ -1,0 +1,19 @@
+<div class="container">
+  <h5 class="title ps-0" >best seller</h5>
+@for (item of bestItems; track $index) {
+  <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
+    <div class="showcase-image"  >
+      <img [src]="item.image" width="75" [alt]="item.title" title="img">
+    </div>
+    <div class="showcase-content">
+        <h5 class="showcase-title "> {{item.title}}</h5>
+        <app-star-raiting  [raiting]="item.rait" class="showcase-raiting"></app-star-raiting>
+        <div class="showcase-price d-flex gap-4 ">
+          <div class="old-price text-decoration-line-through ">${{item.price.oldPrice.toFixed(2)}}</div>
+          <div class="new-price">${{item.price.newPrice.toFixed(2)}}</div>
+        </div>
+    </div>
+  </div>
+}
+
+</div>
