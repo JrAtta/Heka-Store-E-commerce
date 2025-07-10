@@ -6,7 +6,7 @@
         @for (item of newArrivalItems.slice(0,4); track $index) {
         <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
           <div class="showcase-image"  >
-            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+            <img loading="lazy" [src]="item.image" width="75" [alt]="item.title" title="img" >
           </div>
           <div class="showcase-content">
               <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
@@ -23,7 +23,7 @@
         @for (item of newArrivalItems.slice(4,8); track $index) {
         <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
           <div class="showcase-image"  >
-            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+            <img loading="lazy" [src]="item.image" width="75" [alt]="item.title" title="img">
           </div>
           <div class="showcase-content">
               <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
@@ -45,7 +45,7 @@
         @for (item of trendingItems.slice(0,4); track $index) {
         <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
           <div class="showcase-image"  >
-            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+            <img loading="lazy" [src]="item.image" width="75" [alt]="item.title" title="img">
           </div>
           <div class="showcase-content">
               <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
@@ -62,7 +62,7 @@
         @for (item of trendingItems.slice(4,8); track $index) {
         <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
           <div class="showcase-image"  >
-            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+            <img loading="lazy" [src]="item.image" width="75" [alt]="item.title" title="img">
           </div>
           <div class="showcase-content">
               <h5 class="showcase-title mb-2 "> {{item.title}} </h5>
@@ -84,7 +84,7 @@
         @for (item of topRatedItems.slice(0,4); track $index) {
         <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
           <div class="showcase-image"  >
-            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+            <img loading="lazy" [src]="item.image" width="75" [alt]="item.title" title="img">
           </div>
           <div class="showcase-content">
               <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>
@@ -101,7 +101,7 @@
         @for (item of topRatedItems.slice(4,8); track $index) {
         <div class="showcase flex-center gap-3 justify-content-start" [routerLink]="['/detailes',item.title]">
           <div class="showcase-image"  >
-            <img [src]="item.image" width="75" [alt]="item.title" title="img">
+            <img loading="lazy" [src]="item.image" width="75" [alt]="item.title" title="img">
           </div>
           <div class="showcase-content">
               <h5 class="showcase-title mb-2 "> {{item.title}} dsadsadsad</h5>

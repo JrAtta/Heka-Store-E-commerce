@@ -1,5 +1,5 @@
 import { isPlatformBrowser, NgStyle } from '@angular/common';
-import { Component, DoCheck, inject, Input, input, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component,  inject, OnDestroy, OnInit, PLATFORM_ID } from '@angular/core';
 import { StyleSharedDirective } from '../../core/directive/style-shared.directive';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
@@ -8,11 +8,8 @@ import { CartService } from '../../core/services/cart.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 import { OffcanvasWishlistComponent } from "../offcanvas-wishlist/offcanvas-wishlist.component";
-import { WishlistComponent } from '../wishlist/wishlist.component';
 import { WishlistService } from '../../core/services/wishlist.service';
-import { subscribe } from 'diagnostics_channel';
 import { Iwishlist } from '../../core/interfaces/iwishlist';
-// import { StyleSharedDirective } from '../../core/directive/style-shared.directive';
 
 @Component({
   selector: 'app-header',
@@ -55,11 +52,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
       },
     });
 
-    
- 
+
+
   this.Subscription.push(sub);
   this.Subscription.push(sub1);
-  
+
 
     this.getWishlistItems();
   }
@@ -74,10 +71,10 @@ getWishlistItems(){
     },
   });
 this.Subscription.push(sub2);
-  if( isPlatformBrowser(this._PLATFORM_ID)){ 
+  if( isPlatformBrowser(this._PLATFORM_ID)){
      const sub2  = this._wishlistService.getLoggedUserWIshlist().subscribe({
     next:(res:any)=>{
-      
+
       this.numOfWishlistItems = res.count;
       this.wishlistItems = res.data
     }

@@ -4,8 +4,8 @@
         <!-- <div class="card "  > -->
         <div class="card " >
     <div class="card-banner" >
-      <img class=" default" [src]="product.defaultImage" alt="Title" />
-      <img class=" hover " [src]="product.hoverImage" alt="Title" />
+      <img loading="lazy" class=" default" [src]="product.defaultImage" alt="Title" />
+      <img loading="lazy" class=" hover " [src]="product.hoverImage" alt="Title" />
 
       <div class="card-action">
         <button   type="submit" class="btn-action" title="wishList" (click)="addProductToWishlist(product.id)">

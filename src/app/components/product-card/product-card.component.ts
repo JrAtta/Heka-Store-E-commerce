@@ -2,19 +2,15 @@ import { ProductsService } from './../../core/services/products.service';
 import { Component, inject, Input, OnDestroy, OnInit } from '@angular/core';
 import { StarRaitingComponent } from '../star-raiting/star-raiting.component';
 import { IproductCard } from '../../core/interfaces/iproduct-card';
-import { AsyncPipe, CurrencyPipe, NgClass } from '@angular/common';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
-// import { ProductsService } from '../../core/services/products.service';
-import { log } from 'console';
+import {  CurrencyPipe,  } from '@angular/common';
+import {  RouterLink } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
-import { BehaviorSubject, Subscription } from 'rxjs';
+import {  Subscription } from 'rxjs';
 import { SearchPipe } from '../../core/pipes/search.pipe';
 import { FormsModule } from '@angular/forms';
-import { AuthService } from '../../core/services/auth.service';
 import { SearchService } from '../../core/services/search.service';
 import { CartService } from '../../core/services/cart.service';
 import { ToastrService } from 'ngx-toastr';
-import { WishlistComponent } from '../wishlist/wishlist.component';
 import { WishlistService } from '../../core/services/wishlist.service';
 
 @Component({
@@ -82,7 +78,7 @@ export class ProductCardComponent implements OnInit, OnDestroy {
 
       next: (res: any) => {
         this._ToastrService.success(res.message, 'wishlist');
-      
+
       },
       error: (err: HttpErrorResponse) => {
         this._ToastrService.error('Failed to add product to wishlist', 'Error');

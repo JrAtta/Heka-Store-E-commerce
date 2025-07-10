@@ -10,11 +10,11 @@
 
       <div class="card  p-4  bg-transparent align-items-center text-center">
         <div class="image rounded-circle overflow-hidden">
-          <img src="./assets/images/testimonial-1.jpg" class=" " alt="img" width="80">
+          <img loading="lazy" src="./assets/images/testimonial-1.jpg" class=" " alt="img" width="80">
         </div>
         <p class="name text-uppercase my-2 fw-bold  ">Alan Doe</p>
         <p class="job-title"> CEO & Founder Invision </p>
-        <img src="./assets/images/icons/quotes.svg" alt="quates" class="mb-3" width="25">
+        <img loading="lazy" src="./assets/images/icons/quotes.svg" alt="quates" class="mb-3" width="25">
         <p class="para"> Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor dolor sit amet.</p>
       </div>
 
@@ -62,7 +62,7 @@
 @for (blog of blogData; track $index) {
     <div class="blog-item flex-column overflow-hidden ">
      <div class="blog-image overflow-hidden " >
-       <img [src]="blog.image" class="w-100 object-fit-cover rounded" alt="" >
+       <img loading="lazy" [src]="blog.image" class="w-100 object-fit-cover rounded" alt="" >
      </div>
      <div class="blog-content  ">
       <a  class="blog-category text-capitalize" > {{blog.category}}</a>

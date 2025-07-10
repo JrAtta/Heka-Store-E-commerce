@@ -1,9 +1,8 @@
-import { Component, inject, Input, OnDestroy, OnInit } from '@angular/core';
+import { Component, inject,  OnDestroy, OnInit } from '@angular/core';
 import { ProductCardComponent } from "../product-card/product-card.component";
 import { IproductCard } from '../../core/interfaces/iproduct-card';
 import { ProductsService } from '../../core/services/products.service';
-import { map, Subscription } from 'rxjs';
-import { HttpErrorResponse } from '@angular/common/http';
+import {  Subscription } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Component({

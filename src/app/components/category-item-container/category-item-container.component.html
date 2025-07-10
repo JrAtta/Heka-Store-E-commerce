@@ -4,7 +4,7 @@
   @for (category of categoryList; track $index) {
     <div class="category-item">
     <div class="image-category">
-      <img [src]="category.image" [alt]="category.name" width="30px">
+      <img loading="lazy" [src]="category.image" [alt]="category.name" width="30px" title="img">
     </div>
     <div class="content-category">
       <div class="content-flex">

@@ -3,8 +3,8 @@
   <div class="row g-0 align-items-center">
     <div class="product-banner col-md-5  ">
       <owl-carousel-o [options]="customOptions">
-        <ng-template carouselSlide><img class="w-100 " [src]="product?.defaultImage  " [alt]="product?.title|| 'image Can not fetch'" title="img"/></ng-template>
-        <ng-template carouselSlide><img class="w-100 " [src]="product?.hoverImage  " [alt]="product?.title|| 'image Can not fetch'" title="img"/></ng-template>
+        <ng-template carouselSlide><img loading="lazy" class="w-100 " [src]="product?.defaultImage  " [alt]="product?.title|| 'image Can not fetch'" title="img"/></ng-template>
+        <ng-template carouselSlide><img loading="lazy" class="w-100 " [src]="product?.hoverImage  " [alt]="product?.title|| 'image Can not fetch'" title="img"/></ng-template>
       </owl-carousel-o>
 
     </div>

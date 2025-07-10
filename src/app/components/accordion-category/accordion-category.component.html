@@ -4,7 +4,7 @@
       <div class="accordion-button mt-1 py-2 position-relative" data-bs-toggle="collapse"
         [attr.data-bs-target]="'#collapseCategory' + uniqueId  + i" [attr.aria-controls]="'collapseCategory' + uniqueId + i"  (click)="tooglePlus()" #reff>
         <div class="d-flex gap-2">
-          <img [src]="category.icon" alt="" width="20">
+          <img loading="lazy" [src]="category.icon" alt="" width="20">
           <a class="nav-link" href="#" [title]="category.title">{{ category.title }}</a>
         </div>
         <button class="down-list-btn position-absolute end-0" >
