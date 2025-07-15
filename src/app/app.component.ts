@@ -8,6 +8,7 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { FooterComponent } from './components/footer/footer.component';
 // import { RegisterComponent } from './components/register/register.component';
 import { NgIf } from '@angular/common';
+import { NgxSpinnerComponent } from "ngx-spinner";
 // import { AccordionCategoryComponent } from "./components/accordion-category/accordion-category.component";
 
 @Component({
@@ -23,7 +24,7 @@ import { NgIf } from '@angular/common';
     FooterComponent,
     // RegisterComponent,
     NgIf,
-    // AccordionCategoryComponent
+    NgxSpinnerComponent
 ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',

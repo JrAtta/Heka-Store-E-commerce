@@ -66,7 +66,7 @@ export class ForgetPasswordComponent implements OnDestroy{
           }, 1000);
         }
       },
-      error : (err:HttpErrorResponse)=>{
+      error: (err:HttpErrorResponse)=>{
         this.messageSuccess = '';
         this.isLoading = false ;
         this.messageError = err.error.message ;

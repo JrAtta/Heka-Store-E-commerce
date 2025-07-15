@@ -33,9 +33,9 @@ export class MenuBarComponent implements OnInit, OnDestroy  {
 
 ngOnInit(): void {
 
- 
-  
- 
+
+
+
 this.getLoggedCart()
 this.getLoggedWishlist()
 }
@@ -46,9 +46,7 @@ getLoggedCart(){
     next:(res:any) => {
       this.numOfCartItems = res
     },
-    error: (err: HttpErrorResponse) => {
-      console.log(err.error.message);
-    },
+   
   });
 
    const subscribe2 = this._cartService.getLoggedCart().subscribe({
@@ -59,7 +57,7 @@ getLoggedCart(){
         console.log(err.error.message);
       },
     });
-  
+
   this.Subscription.push(subscribe1,subscribe2);
 }
 getLoggedWishlist(){
@@ -67,10 +65,8 @@ getLoggedWishlist(){
     next:(res:any) => {
       this.numOfWishlistItems = res
     },
-    error: (err: HttpErrorResponse) => {
-      console.log(err.error.message);
-    },
- 
+   
+
   });
  let sub1 =  this._WishlistService.getLoggedUserWIshlist().subscribe({
     next:(res:any)=>{

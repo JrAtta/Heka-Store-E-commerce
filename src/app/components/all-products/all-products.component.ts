@@ -63,10 +63,7 @@ export class AllProductsComponent implements OnInit, OnDestroy {
       this.setLimit(this.limit);
 
         },
-        error: (err: HttpErrorResponse) => {
-          this.errorMsg = err.error.message;
-          console.log(this.errorMsg);
-        },
+       
         complete: () => {
           // Done
         },

@@ -73,9 +73,7 @@ export class CategoryItemContainerComponent implements OnInit , OnDestroy {
 
 
       },
-      error:(err:HttpErrorResponse)=>{
-        console.log( "Error :"+ err.error.message)
-      }
+     
     });
     this.subscribtion.push(categoriesSub);
  }

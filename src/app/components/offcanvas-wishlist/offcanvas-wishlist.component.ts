@@ -26,7 +26,7 @@ export class OffcanvasWishlistComponent implements OnInit, OnDestroy {
     private _toastrService: ToastrService
   ) {}
   ngOnInit(): void {
-   
+
     this.getLoggedWishlistItems();
   }
 
@@ -36,9 +36,7 @@ export class OffcanvasWishlistComponent implements OnInit, OnDestroy {
         this._toastrService.success(res.message, 'Fresh Cart');
         this._CartService.getLoggedCart().subscribe();
       },
-      error: (err: HttpErrorResponse) => {
-        this._toastrService.error(err.error.message, 'Error');
-      },
+      
     });
 
     this.subscription.push(sub2);
@@ -65,9 +63,7 @@ export class OffcanvasWishlistComponent implements OnInit, OnDestroy {
                 Swal.fire('Deleted!', 'Your Item has been deleted.', 'success');
               }, 1000);
             },
-            error: (err: HttpErrorResponse) => {
-              console.log(err.error.messsage);
-            },
+            
           });
         this.subscription.push(sub4);
       }
@@ -80,9 +76,7 @@ export class OffcanvasWishlistComponent implements OnInit, OnDestroy {
         this.numOfWishlistItems = res.count;
         this.wishlistData = res.data;
       },
-      error: (err: HttpErrorResponse) => {
-        console.log(err.error.message);
-      },
+      
     });
     this.subscription.push(sub3);
   }

@@ -16,7 +16,7 @@ export class CartService {
 
   private cartdata = new BehaviorSubject<any>([]);
   public cartData$ = this.cartdata.asObservable();
- 
+
   constructor(
     private _HttpClient: HttpClient,
     @Inject(PLATFORM_ID) private _PLATFORM_ID: any

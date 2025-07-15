@@ -34,16 +34,14 @@ export class CartComponent implements OnInit, OnDestroy {
     const sub2 = this._CartService.getLoggedCart().subscribe({
       next: (res: any) => {
         // this.cartData = res.data;
-      
+
 
         // this._CartService.updateCartData(res.data)
         this._CartService.updateCartData(res.data)
       },
-      error: (err: HttpErrorResponse) => {
-        console.log(err.error.message);
-      },
+      
     });
- 
+
     this.subscription.push(sub1,sub2);
   }
 
@@ -62,9 +60,7 @@ export class CartComponent implements OnInit, OnDestroy {
           next: (res: any) => {
             this.cartData = res.data;
           },
-          error: (err: HttpErrorResponse) => {
-            console.log(err.error.messsage);
-          },
+          
         });
         this.subscription.push(sub2);
       }
@@ -91,9 +87,7 @@ export class CartComponent implements OnInit, OnDestroy {
               Swal.fire('Deleted!', 'Your cart has been deleted.', 'success');
             }, 1000);
           },
-          error: (err: HttpErrorResponse) => {
-            console.log(err.error.message);
-          },
+          
         });
 
         this.subscription.push(sub3);
@@ -108,9 +102,7 @@ export class CartComponent implements OnInit, OnDestroy {
         next: (res: any) => {
           this.cartData = res.data;
         },
-        error: (err: HttpErrorResponse) => {
-          console.log(err.error.message);
-        },
+        
       });
     this.subscription.push(sub4);
   }

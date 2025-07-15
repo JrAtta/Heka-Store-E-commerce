@@ -39,17 +39,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
     next: (res: any) => {
       this.numOfCartItems = res;
     },
-    error: (err: HttpErrorResponse) => {
-      console.log(err.error.message);
-    },
+    
   });
    const sub1 = this._cartService.getLoggedCart().subscribe({
       next: (res: any) => {
         this.numOfCartItems = res.numOfCartItems;
       },
-      error: (err: HttpErrorResponse) => {
-        console.log(err.error.message);
-      },
+      
     });
 
 
@@ -66,9 +62,7 @@ getWishlistItems(){
     next: (res: any) => {
       this.numOfWishlistItems = res;
     },
-    error: (err: HttpErrorResponse) => {
-      console.log(err.error.message);
-    },
+    
   });
 this.Subscription.push(sub2);
   if( isPlatformBrowser(this._PLATFORM_ID)){

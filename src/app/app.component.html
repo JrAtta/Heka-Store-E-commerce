@@ -3,5 +3,6 @@
 <app-menu-bar *ngIf="checkPath"></app-menu-bar>
 <div class=" p-0">
  <router-outlet></router-outlet>
+ <ngx-spinner bdColor = "rgb(237,237,237,.6)" size = "medium" color = "#ff6666" type = "ball-clip-rotate-pulse" [fullScreen] = "true"><p style="color: #ff6666" > Loading... </p></ngx-spinner>
  </div>
 <app-footer *ngIf="checkPath"></app-footer>

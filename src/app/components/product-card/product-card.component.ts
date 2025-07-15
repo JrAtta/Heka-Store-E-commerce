@@ -50,7 +50,7 @@ export class ProductCardComponent implements OnInit, OnDestroy {
         this._ToastrService.success(res.message, 'Fresh Cart');
       },
       error: (err: HttpErrorResponse) => {
-        this._ToastrService.error('Failed to add product to cart', 'Error', {});
+        this._ToastrService.error('Failed to add product to cart', 'Error');
       },
     });
     this.subscription.push(sub2);
@@ -67,7 +67,7 @@ export class ProductCardComponent implements OnInit, OnDestroy {
         this._ToastrService.error(
           'Failed to repeat product to cart',
           'Error',
-          {}
+
         );
       },
     });

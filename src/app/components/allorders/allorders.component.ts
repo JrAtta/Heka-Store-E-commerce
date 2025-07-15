@@ -49,9 +49,7 @@ export class AllordersComponent implements OnInit, OnDestroy {
           console.log(res);
           window.open(res.session.url)
         },
-        error: (err:HttpErrorResponse)=>{
-          console.log(err.error.message)
-        }
+       
       });
       this.subscription.push(sub2);
     } else {
