@@ -32,7 +32,7 @@ export class ProductDetailesComponent implements OnInit , OnDestroy {
 ngOnInit(): void {
 
 this.productCardLists = this._ProductsService.productCardList
-  // console.log(this._ActivatedRoute);
+  console.log(this._ActivatedRoute);
  let sub1 = this._ActivatedRoute.paramMap.subscribe({
     next:(paraMap:ParamMap)=>{
       this.title = paraMap.get("title") || '' ; // handle possible null values  (  ! =   || '')

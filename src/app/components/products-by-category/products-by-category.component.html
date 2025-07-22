@@ -1,0 +1,32 @@
+<div class="container-md ">
+
+
+  <!-- <div class="products-container">
+      <h2>{{ categoryName | titlecase }} Products</h2>
+      <div class="products-grid">
+        <div *ngFor="let product of productsByCategory" class="product-card">
+          <img [src]="product.defaultImage" [alt]="product.title" [title]=" product.title " />
+          <h3>{{ product.title }}</h3>
+          <p>{{ product.category }}</p>
+          <div class="price">
+            <span class="new-price">${{ product.price.newPrice }}</span>
+            <span class="old-price">${{ product.price.oldPrice }}</span>
+          </div>
+          <div class="rating">
+            Rating: {{ product.rait }} ({{ product.ratingAmount }} reviews)
+          </div>
+        </div>
+      </div>
+
+    </div> -->
+
+     <div class="title">
+        {{categoryName | titlecase}} Products
+    </div>
+    <app-product-card [productCardList]="productsByCategory"></app-product-card>
+
+    <div *ngIf="productsByCategory.length === 0" class="no-products flex-center mt-5">
+      <p>No products found for this category.</p>
+    </div>
+
+  </div>

@@ -62,6 +62,13 @@ export const routes: Routes = [
     canActivate: [authGuard]
   },
   {
+    path: 'products/:category',
+    loadComponent: () =>
+      import('./components/products-by-category/products-by-category.component').then(m => m.ProductsByCategoryComponent),
+    title: 'products by category',
+    canActivate: [authGuard]
+  },
+  {
     path: '**',
     loadComponent: () =>
       import('./components/notfound/notfound.component').then(m => m.NotfoundComponent),

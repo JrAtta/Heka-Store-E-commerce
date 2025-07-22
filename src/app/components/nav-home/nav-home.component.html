@@ -4,7 +4,7 @@
       <ul class="navbar-nav flex-center   ">
         <li class="nav-item ">
           <a class="nav-link  " href="#">
-            <small class="py-2">Home</small>
+            <small class="py-2">{{ "navbar.home" | translate}}</small>
           </a>
 
         </li>
@@ -16,35 +16,35 @@
           <div class="dropdown-panel position-absolute row  ">
             <ul class="dropdown-panel-list col-3">
               <li class="menu-panel-header">
-                <a href="#" class="  " [ngStyle]="menuTitle">electronics</a>
+                <a  (click)='getProductsByCategory("electronics")'  [ngStyle]="menuTitle">electronics</a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('desktop')">
                   desktop
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('laptop')">
                   laptop
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('camera')">
                   camera
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class=""  (click)=" getProductsByCategory('tablet')">
                   tablet
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class=""  (click)=" getProductsByCategory('headphone')">
                   headphone
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="py-0" class="" title="electronics section">
+                <a class="py-0" class="" title="electronics section"   (click)=" getProductsByCategory('electronics')">
                   <img loading="lazy" src="./assets/images/electronics-banner-1.jpg" alt="" width="250" height="120"
                     [ngStyle]="imageStyle">
                 </a>
@@ -52,105 +52,105 @@
             </ul>
             <ul class="dropdown-panel-list col-3">
               <li class="menu-panel-header">
-                <a href="#" class="  " [ngStyle]="menuTitle">men's</a>
+                <a class="  " (click)="getProductsByCategory(men)"  [ngStyle]="menuTitle">men's</a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Formal')">
                   Formal
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class=""  (click)=" getProductsByCategory('Casual')">
                   Casual
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Sports')">
                   Sports
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Jacket')">
                   Jacket
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Sunglasses')">
                   Sunglasses
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="py-0" class="" title="mens section">
+                <a class="py-0" class="" title="mens section" (click)=" getProductsByCategory(men)">
                   <img loading="lazy" src="./assets/images/mens-banner.jpg" alt="" width="250" height="120" [ngStyle]="imageStyle">
                 </a>
               </li>
             </ul>
             <ul class="dropdown-panel-list col-3">
               <li class="menu-panel-header">
-                <a href="#" class="  " [ngStyle]="menuTitle">women's</a>
+                <a class="  " (click)="getProductsByCategory(women)"  [ngStyle]="menuTitle">women's</a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class=""  (click)=" getProductsByCategory('Formal')">
                   Formal
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Casual')">
                   Casual
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('perfume')">
                   perfume
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('cosmetics')">
                   cosmetics
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('bags')">
                   bags
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="py-0" class="" title="mens section">
+                <a class="py-0" class="" title="womens section" (click)=" getProductsByCategory(women)">
                   <img loading="lazy" src="./assets/images/womens-banner.jpg" alt="" width="250" height="120" [ngStyle]="imageStyle">
                 </a>
               </li>
             </ul>
             <ul class="dropdown-panel-list col-3">
               <li class="menu-panel-header">
-                <a href="#" class="  " [ngStyle]="menuTitle">electronics</a>
+                <a  (click)=" getProductsByCategory('electronics')" [ngStyle]="menuTitle">electronics</a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Smart Watch')" >
                   Smart Watch
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Smart TV')">
                   Smart TV
                 </a>
               </li>
-              <li class="list-panel-item">
-                <a href="#" class="">
+              <li class="list-panel-item" >
+                <a class="" (click)=" getProductsByCategory('Keyboard')">
                   Keyboard
                 </a>
               </li>
-              <li class="list-panel-item">
-                <a href="#" class="">
+              <li class="list-panel-item" >
+                <a class="" (click)=" getProductsByCategory('Mouse')">
                   Mouse
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="">
+                <a class="" (click)=" getProductsByCategory('Microphone')">
                   Microphone
                 </a>
               </li>
               <li class="list-panel-item">
-                <a href="#" class="py-0" class="" title="electronics section">
+                <a class="py-0" class="" title="electronics section" (click)=" getProductsByCategory('electronics')">
                   <img loading="lazy" src="./assets/images/electronics-banner-2.jpg" alt="" width="250" height="120"
                     [ngStyle]="imageStyle">
                 </a>
@@ -159,21 +159,21 @@
           </div>
         </li>
         <li class="nav-item">
-          <a class="nav-link  position-relative" href="#">
-            <small class="py-2">Men's</small>
+          <a class="nav-link  position-relative" >
+            <small class="py-2" (click)=" getProductsByCategory(men)">Men's</small>
             <ul class="dropdown-list position-absolute px-3 py-4 ">
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)=" getProductsByCategory('shirt')">
                 shirt
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item"  (click)=" getProductsByCategory('Shorts')">
                 Shorts & Jeans
 
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item"  (click)=" getProductsByCategory('Shoes')">
                 Safety Shoes
 
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item"  (click)=" getProductsByCategory('Wallet')">
                 Wallet
 
               </li>
@@ -181,38 +181,39 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link   position-relative" href="#">
-            <small class="py-2">Women's</small>
+          <a class="nav-link   position-relative" >
+
+            <small class="py-2" (click)=" getProductsByCategory(women)" >Women's</small>
             <ul class="dropdown-list position-absolute px-3 py-4 ">
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)=" getProductsByCategory('dress') ">
                 Dress & Frock
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)=" getProductsByCategory('Earrings')">
                 Earrings
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)=" getProductsByCategory('Necklace')">
                 Necklace
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)=" getProductsByCategory('Makeup')">
                 Makeup Kit
               </li>
             </ul>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  position-relative" href="#">
-            <small class="py-2">jewellery</small>
+          <a class="nav-link  position-relative"  >
+            <small class="py-2" (click)=" getProductsByCategory('jewellery')">jewellery</small>
             <ul class="dropdown-list position-absolute px-3 py-4 ">
-              <li class="dropdown-item">
+              <li class="dropdown-item"  (click)="getProductsByCategory('Earrings')">
                 Earrings
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Rings')">
                 Couple Rings
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Necklace')">
                 Necklace
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Bracelets')">
                 Bracelets
               </li>
             </ul>
@@ -220,32 +221,33 @@
 
         </li>
         <li class="nav-item">
-          <a class="nav-link  position-relative" href="#">
-            <small class="py-2">perfume</small>
+          <a class="nav-link  position-relative" >
+
+            <small class="py-2" (click)=" getProductsByCategory('perfume')">perfume</small>
             <ul class="dropdown-list position-absolute px-3 py-4 ">
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Clothes Perfume')">
                 Clothes Perfume
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Deodorant')">
                 Deodorant
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Flower Fragrance')">
                 Flower Fragrance
               </li>
-              <li class="dropdown-item">
+              <li class="dropdown-item" (click)="getProductsByCategory('Clothes Perfume')">
                 Clothes Perfume
               </li>
             </ul>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
-            <small class="py-2">Blog</small>
+          <a class="nav-link  "  >
+            <small class="py-2" (click)=" getProductsByCategory('blog')">Blog</small>
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link  " href="#">
-            <small class="py-2">Hot Offers</small>
+          <a class="nav-link  "  >
+            <small class="py-2" (click)=" getProductsByCategory('offers')">Hot Offers</small>
           </a>
         </li>
       </ul>

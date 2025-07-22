@@ -21,11 +21,34 @@
         <option value="USD $" class=" " selected>USD $</option>
         <option value="EUR €" class=" ">EUR €</option>
       </select>
-      <select  title="Language" class="border border-white p-2 text-uppercase  " [ngStyle]="selectStyle">
-        <option value="ENGLISH"   selected>ENGLISH</option>
-        <option value="Français"  >Français</option>
-        <option value="Español" >Español</option>
-      </select>
+      <!-- <select  title="Language" class="border border-white p-2 text-uppercase  " [ngStyle]="selectStyle">
+        <option (click)="change('en')"  value="ENGLISH"   selected>ENGLISH</option>
+        <option (click)="change('fr')" value="Français"  >Français</option>
+        <option (click)="change('es')" value="Español" >Español</option>
+        <option (click)="change('ar')" value="Arabic" >Arabic</option>
+      </select> -->
+<!-- <select
+  title="Language"
+  class="border border-white p-2 text-uppercase"
+  [ngStyle]="selectStyle"
+  (change)="change($event.target.value )"
+>
+  <option value="en">ENGLISH</option>
+  <option value="fr">Français</option>
+  <option value="es">Español</option>
+  <option value="ar">Arabic</option>
+</select> -->
+
+<select title="Language" class="border border-white p-2 text-uppercase" 
+        [ngStyle]="selectStyle"
+        [(ngModel)]="selectedLanguage"
+        (ngModelChange)="change($event)">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="es">Español</option>
+        <option value="ar">Arabic</option>
+</select>
+
 
       <!-- sign out  -->
       <button class="btn signOut  ms-3  " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"> Sign out</button>

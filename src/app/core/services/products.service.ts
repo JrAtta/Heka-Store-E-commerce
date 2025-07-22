@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, Observable } from 'rxjs';
+import { BehaviorSubject, map, Observable } from 'rxjs';
 import { Environments } from '../Environments/environment';
 import { IproductCard } from '../interfaces/iproduct-card';
 
@@ -168,7 +168,17 @@ export class ProductsService {
     },
 ];
 
+private prdByCategory = new BehaviorSubject <IproductCard[]>([]);
+public prdByCategory$ = this.prdByCategory.asObservable();
 
+
+
+setPrdBycategory(prd:IproductCard[]) {
+  this.prdByCategory.next(prd);
+}
+getPrdByCategory():IproductCard[]{
+  return this.prdByCategory.value ;
+}
 
 
 constructor(private _HtppClient:HttpClient) { }
@@ -188,6 +198,9 @@ constructor(private _HtppClient:HttpClient) { }
   getProductByName(title: string) : IproductCard | undefined {
     return this.productCardList.find(product => product.title.toLowerCase() === title.toLowerCase());
   }
- 
+  // getProductsByCategory(category: string): IproductCard[] {
+  //   return this.productCardList.filter(product => product.category.toLowerCase() === category.toLowerCase());
+  // }
+
 
 }

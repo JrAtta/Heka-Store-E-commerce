@@ -1,19 +1,23 @@
+import { FormsModule } from '@angular/forms';
 import { NgIf, NgStyle } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Router } from '@angular/router';
 import { AuthService } from '../../core/services/auth.service';
+import { TranslateModule,  } from '@ngx-translate/core';
+import { TranslationService } from '../../core/services/translation.service';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [NgStyle,NgIf],
+  imports: [NgStyle,NgIf, TranslateModule,FormsModule,NgxSpinnerModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-   _Router = inject(Router);
-   _Auth = inject(AuthService)
-   
+  selectedLanguage: string = 'en';
+  private readonly _Auth = inject(AuthService)
+  private readonly _TranslationService = inject(TranslationService);
+
   selectStyle : object = {'font-size' : 'var(--fs-7)', 'font-weight': 'var(--weight-500)'};
   isLoading:boolean = false;
 
@@ -25,4 +29,15 @@ export class NavComponent {
       this._Auth.signOut();
     },3000)
   }
+
+  change(lang:string):void {
+    this._TranslationService.changeLang(lang);
+
+  }
+  onLanguageChange(event: Event) {
+  const target = event.target as HTMLSelectElement;
+  this.change(target.value);
+}
+
+
 }
